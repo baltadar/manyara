@@ -1,7 +1,7 @@
 <section
-  class="relative h-screen flex items-center justify-center"
+  class="relative h-screen text-white"
   style="
-    background:
+    background: 
       linear-gradient(
         to bottom right,
         rgba(47, 79, 79, 0.95),
@@ -11,24 +11,28 @@
     background-blend-mode: overlay;
   "
 >
-  <div class="max-w-2xl px-6 text-center flex flex-col justify-center h-full">
+  <!-- The background occupies the full screen -->
+  <div class="absolute inset-0"></div>
+  
+  <!-- Text container moved to the bottom center with a semi-transparent background -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black/60 px-8 py-6 rounded-lg text-center">
     <h1
-      class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight text-slate-50"
+      class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight"
       style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);"
     >
-      Hon. Antony Manyara
+      Dr. Hon. Antony Manyara
     </h1>
     <p
-      class="text-xl md:text-2xl mb-6 text-slate-50"
+      class="text-xl md:text-2xl mb-4"
       style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);"
     >
       Visionary Youth Leader for Kenya’s Transformation
     </p>
     <p
-      class="text-md md:text-lg mb-8 text-slate-50 leading-relaxed"
-      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"
+      class="text-md md:text-lg mb-6 text-gray-200 leading-relaxed"
+      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);"
     >
-      Shaping a prosperous, inclusive future for all.
+      Shaping a prosperous, inclusive future for all Kenyans.
     </p>
     <a
       href="#about"
