@@ -4,19 +4,23 @@
     background:
       linear-gradient(
         to bottom right,
-        rgba(47,79,79,0.9),   /* Dark Slate Gray */
-        rgba(0,112,192,0.9)    /* Vibrant Cobalt Blue */
+        rgba(47,79,79,0.9),
+        rgba(0,112,192,0.9)
       ),
       url('https://i.imgur.com/VKI0SuE.jpg') center/cover no-repeat;
     background-blend-mode: overlay;
   "
 >
-  <div class="max-w-2xl px-6 text-center">
+  <!-- 
+    Added flex and justify-end classes to push the content down.
+    Also added pb-12 to provide some bottom padding.
+  -->
+  <div class="max-w-2xl px-6 text-center flex flex-col justify-end h-full pb-12">
     <h1
       class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight"
       style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);"
     >
-      Dr. Hon. Antony Manyara
+      Hon. Antony Manyara
     </h1>
     <p
       class="text-xl md:text-2xl mb-6"
@@ -32,7 +36,7 @@
     </p>
     <a
       href="#about"
-      class="inline-block bg-lime-500 hover:bg-lime-600 text-white font-semibold px-8 py-3 rounded-full shadow-md transform transition duration-300 hover:scale-105"
+      class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-md transform transition duration-300 hover:scale-105"
     >
       Learn More
     </a>
