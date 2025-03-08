@@ -1,0 +1,43 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Official website of Hon. Antony Manyara—youth advocate, student leader, and visionary committed to shaping a more prosperous, equitable Kenya." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 237, 137, 54;
+    --accent-light: 251, 146, 60;
+    --accent-dark: 234, 88, 12;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
