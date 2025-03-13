@@ -1,54 +1,65 @@
+import { FaTrophy, FaMedal, FaStar, FaBuilding, FaAward } from 'react-icons/fa';
+
 ---
-import { FaTrophy, FaMedal, FaStar } from 'react-icons/fa';
----
 
-<section id="leadership" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Leadership Highlights</h2>
+<section id="leadership" class="py-20 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+      Leadership & Recognitions
+    </h2>
 
-    <div class="max-w-4xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4 flex items-center">
-            <FaTrophy className="text-accent mr-3" />
-            University of Nairobi Leadership
-          </h3>
-          <p class="text-gray-700">
-            Pioneered a new era of peaceful student elections and strengthened campus devolution as the Inaugural UNSA Chairperson.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-4 flex items-center">
-            <FaMedal className="text-accent mr-3" />
-            Continental Leadership
-          </h3>
-          <p class="text-gray-700">
-            Elected Chairperson of African Union - University Students' Organization (AU-USO) by representatives from 47 African countries.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold mb-6 flex items-center">
-          <FaStar className="text-accent mr-3" />
-          Recognitions & Awards
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+      <!-- University Leadership -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
+        <h3 class="text-xl font-semibold mb-4 flex items-center">
+          <FaTrophy className="text-purple-700 mr-3" />
+          University of Nairobi Leadership
         </h3>
-        <ul class="space-y-4 text-gray-700">
-          <li class="flex items-start">
-            <span class="text-accent mr-2">•</span>
-            Commended by the University of Nairobi Vice Chancellor for outstanding student leadership.
-          </li>
-          <li class="flex items-start">
-            <span class="text-accent mr-2">•</span>
-            Honored by Africa Progress Group (APG) for exemplary representation of youth in digital and cultural spheres.
-          </li>
-          <li class="flex items-start">
-            <span class="text-accent mr-2">•</span>
-            Celebrated by the Ministry of Education for championing peace-building activities nationwide.
-          </li>
-        </ul>
+        <p class="text-gray-700">
+          Pioneered a new era of peaceful student elections and strengthened campus devolution as the Inaugural UNSA Chairperson.
+        </p>
       </div>
+
+      <!-- Continental Leadership -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900">
+        <h3 class="text-xl font-semibold mb-4 flex items-center">
+          <FaMedal className="text-purple-700 mr-3" />
+          Continental Leadership
+        </h3>
+        <p class="text-gray-700">
+          Elected Chairperson of the African Union - University Students' Organization (AU-USO) by representatives from 47 African countries.
+        </p>
+      </div>
+    </div>
+
+    <!-- Recognitions & Awards -->
+    <div class="bg-white p-8 rounded-lg shadow-lg text-gray-900 mt-12">
+      <h3 class="text-2xl font-bold mb-6 flex items-center text-purple-700">
+        <FaStar className="mr-3" />
+        Recognitions & Awards
+      </h3>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start">
+          <FaAward className="text-purple-700 mr-3" />
+          <span>Head of State Commendation (HSC) awarded by President Uhuru Kenyatta.</span>
+        </li>
+        <li class="flex items-start">
+          <FaBuilding className="text-purple-700 mr-3" />
+          <span>Ambassador of Sustainable Housing - Advocating for eco-friendly and affordable housing.</span>
+        </li>
+        <li class="flex items-start">
+          <FaStar className="text-purple-700 mr-3" />
+          <span>Honored by Africa Progress Group (APG) for youth leadership in digital & cultural spheres.</span>
+        </li>
+        <li class="flex items-start">
+          <FaStar className="text-purple-700 mr-3" />
+          <span>Commended by the University of Nairobi Vice Chancellor for outstanding student leadership.</span>
+        </li>
+        <li class="flex items-start">
+          <FaStar className="text-purple-700 mr-3" />
+          <span>Celebrated by the Ministry of Education for championing peace-building initiatives.</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
