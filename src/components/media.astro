@@ -1,0 +1,55 @@
+---
+export interface MediaItem {
+  type: "video" | "image";
+  title: string;
+  url: string;
+}
+
+const mediaItems: MediaItem[] = [
+  {
+    type: "video",
+    title: "Interview on Youth Leadership",
+    url: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+  },
+  {
+    type: "video",
+    title: "Antony Manyara at National Youth Summit",
+    url: "https://www.youtube.com/embed/YOUR_VIDEO_ID"
+  },
+  {
+    type: "image",
+    title: "Youth Advocacy Africa Workshop",
+    url: "/images/yaa-workshop.jpg"
+  },
+  {
+    type: "image",
+    title: "KUSO Mental Health Awareness Campaign",
+    url: "/images/kuso-mental-health.jpg"
+  }
+];
+---
+
+<section id="media-gallery" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Media & Gallery</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {mediaItems.map((item) => (
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
+          {item.type === "video" ? (
+            <iframe 
+              class="w-full h-56 rounded-lg"
+              src={item.url}
+              title={item.title}
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          ) : (
+            <img src={item.url} alt={item.title} class="w-full h-56 object-cover rounded-lg" />
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
