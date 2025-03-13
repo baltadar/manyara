@@ -23,21 +23,21 @@ const mediaItems = [
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Media & Gallery</h2>
 
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {mediaItems.map(item => (
+      {% for item in mediaItems %}
         <div class="bg-white p-6 rounded-lg shadow-md text-gray-900">
-          <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
-          {item.type === "video" ? (
+          <h3 class="text-lg font-semibold mb-2">{{ item.title }}</h3>
+          {% if item.type === "video" %}
             <iframe 
               class="w-full h-56 rounded-lg"
-              src={item.url}
-              title={item.title}
+              src="{{ item.url }}"
+              title="{{ item.title }}"
               allow="fullscreen"
             ></iframe>
-          ) : (
-            <img src={item.url} alt={item.title} class="w-full h-56 object-cover rounded-lg" />
-          )}
+          {% else %}
+            <img src="{{ item.url }}" alt="{{ item.title }}" class="w-full h-56 object-cover rounded-lg" />
+          {% endif %}
         </div>
-      ))}
+      {% endfor %}
     </div>
   </div>
 </section>
