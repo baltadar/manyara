@@ -1,22 +1,16 @@
 ---
-export interface MediaItem {
-  type: "video" | "image";
-  title: string;
-  url: string;
-}
-
-const mediaItems: MediaItem[] = [
+const mediaItems = [
   {
     type: "video",
     title: "Interview on Youth Leadership",
     url: "https://www.youtube.com/embed/mSGG1U9rCEM?si=GsIj0f5xQmsOQiVm"
   },
-{
+  {
     type: "video",
     title: "Call for Release of Arrested Students",
     url: "https://www.youtube.com/embed/k4gVjVpBWcE?si=fNheewa8wQ0STpe8"
   },
-{
+  {
     type: "video",
     title: "Interview with Milele FM",
     url: "https://www.youtube.com/embed/1HIX4H1kjWM?si=xgVIHeiAGf516RTV"
@@ -24,21 +18,20 @@ const mediaItems: MediaItem[] = [
 ];
 ---
 
-<section id="media-gallery" class="py-20 bg-gray-100">
+<section id="media-gallery" class="py-20 bg-gradient-to-b from-purple-900 to-purple-700 text-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Media & Gallery</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Media & Gallery</h2>
 
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {mediaItems.map((item) => (
-        <div class="bg-white p-6 rounded-lg shadow-md">
+      {mediaItems.map(item => (
+        <div class="bg-white p-6 rounded-lg shadow-md text-gray-900">
           <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
           {item.type === "video" ? (
             <iframe 
               class="w-full h-56 rounded-lg"
               src={item.url}
               title={item.title}
-              frameborder="0"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
           ) : (
             <img src={item.url} alt={item.title} class="w-full h-56 object-cover rounded-lg" />
