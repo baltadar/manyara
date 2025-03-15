@@ -2,61 +2,65 @@
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 ---
 
-<section id="contact" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get in Touch</h2>
+<section id="contact" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+      <p class="text-lg text-gray-600">Feel free to reach out for any inquiries or collaborations.</p>
+    </div>
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-      <div>
-        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <FaEnvelope class="w-6 h-6 text-primary mt-1 mr-4" />
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mt-12">
+      <!-- Contact Info -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Contact Information</h3>
+        <div class="space-y-5">
+          <div class="flex items-center">
+            <FaEnvelope class="w-6 h-6 text-blue-500 mr-3" />
             <div>
-              <p class="font-semibold">Email</p>
-              <a href="mailto:archmanyara@gmail.com" class="text-gray-600 hover:text-primary">
+              <p class="font-semibold text-gray-700">Email</p>
+              <a href="mailto:archmanyara@gmail.com" class="text-gray-600 hover:text-blue-500">
                 archmanyara@gmail.com
               </a>
             </div>
           </div>
           
-          <div class="flex items-start">
-            <FaPhone class="w-6 h-6 text-primary mt-1 mr-4" />
+          <div class="flex items-center">
+            <FaPhone class="w-6 h-6 text-blue-500 mr-3" />
             <div>
-              <p class="font-semibold">Phone</p>
+              <p class="font-semibold text-gray-700">Phone</p>
               <p class="text-gray-600">+254 700062420</p>
             </div>
           </div>
           
-          <div class="flex items-start">
-            <FaMapMarkerAlt class="w-6 h-6 text-primary mt-1 mr-4" />
+          <div class="flex items-center">
+            <FaMapMarkerAlt class="w-6 h-6 text-blue-500 mr-3" />
             <div>
-              <p class="font-semibold">Address</p>
-              <p class="text-gray-600">P.O. Box 17586 - 00100,</p>
-              <p class="text-gray-600">Nairobi, Kenya</p>
+              <p class="font-semibold text-gray-700">Address</p>
+              <p class="text-gray-600">P.O. Box 17586 - 00100, Nairobi, Kenya</p>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="mt-12">
-          <h3 class="text-2xl font-semibold mb-6">Follow Hon. Antony Manyara</h3>
-          <div class="flex space-x-4">
-            <a href="https://www.facebook.com/hon.antonymanyara/" class="text-gray-600 hover:text-primary" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF class="w-8 h-8" />
-            </a>
-            <a href="https://x.com/antonymanyara?lang=en" class="text-gray-600 hover:text-primary" target="_blank" rel="noopener noreferrer">
-              <FaTwitter class="w-8 h-8" />
-            </a>
-            <a href="https://www.instagram.com/hon.antonymanyara/" class="text-gray-600 hover:text-primary" target="_blank" rel="noopener noreferrer">
-              <FaInstagram class="w-8 h-8" />
-            </a>
-            <a href="https://www.linkedin.com/in/arch-antony-manyara-b8863195/?originalSubdomain=ke" class="text-gray-600 hover:text-primary" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin class="w-8 h-8" />
-            </a>
-            <a href="https://www.youtube.com/watch?v=k4gVjVpBWcE&ab_channel=MutembeiTV" class="text-gray-600 hover:text-primary" target="_blank" rel="noopener noreferrer">
-              <FaYoutube class="w-8 h-8" />
-            </a>
-          </div>
+      <!-- Social Media -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Follow Hon. Antony Manyara</h3>
+        <div class="flex justify-center space-x-5">
+          <a href="https://www.facebook.com/hon.antonymanyara/" class="text-gray-600 hover:text-blue-600 transition duration-300" target="_blank">
+            <FaFacebookF class="w-8 h-8" />
+          </a>
+          <a href="https://x.com/antonymanyara?lang=en" class="text-gray-600 hover:text-blue-600 transition duration-300" target="_blank">
+            <FaTwitter class="w-8 h-8" />
+          </a>
+          <a href="https://www.instagram.com/hon.antonymanyara/" class="text-gray-600 hover:text-pink-500 transition duration-300" target="_blank">
+            <FaInstagram class="w-8 h-8" />
+          </a>
+          <a href="https://www.linkedin.com/in/arch-antony-manyara-b8863195/?originalSubdomain=ke" class="text-gray-600 hover:text-blue-700 transition duration-300" target="_blank">
+            <FaLinkedin class="w-8 h-8" />
+          </a>
+          <a href="https://www.youtube.com/watch?v=k4gVjVpBWcE&ab_channel=MutembeiTV" class="text-gray-600 hover:text-red-500 transition duration-300" target="_blank">
+            <FaYoutube class="w-8 h-8" />
+          </a>
         </div>
       </div>
     </div>
