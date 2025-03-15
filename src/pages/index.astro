@@ -5,12 +5,12 @@ import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Vision from '../components/Vision.astro';
 import Leadership from '../components/Leadership.astro';
-import MediaGallery from '../components/MediaGallery.astro'; // Add this line
+import MediaGallery from '../components/MediaGallery.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 
-// Import icons (only once)
-import { FaUserTie, FaBriefcase, FaGraduationCap, FaQuoteLeft } from "react-icons/fa";
+// Import React icons via a separate component
+import Icons from '../components/Icons.jsx';
 ---
 
 <Layout title="Dr. Hon. Antony Manyara - Youth Leader & Visionary">
@@ -20,7 +20,7 @@ import { FaUserTie, FaBriefcase, FaGraduationCap, FaQuoteLeft } from "react-icon
     <About />
     <Vision />
     <Leadership />
-    <MediaGallery /> <!-- Added Media Gallery Section -->
+    <MediaGallery />
     <Contact />
   </main>
   <Footer />
