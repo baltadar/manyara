@@ -22,22 +22,34 @@ const mediaItems = [
   <div class="container mx-auto px-4">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Media & Gallery</h2>
 
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {mediaItems.map((item) => (
-        <div class="bg-white p-6 rounded-lg shadow-md text-gray-900">
-          <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
-          {item.type === "video" ? (
-            <iframe 
-              class="w-full h-56 rounded-lg"
-              src={item.url}
-              title={item.title}
-              allow="fullscreen"
-            ></iframe>
-          ) : (
-            <img src={item.url} alt={item.title} class="w-full h-56 object-cover rounded-lg" />
-          )}
-        </div>
-      ))}
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+      {
+        mediaItems.map((item) => (
+          <div class="bg-white p-6 rounded-lg shadow-md text-gray-900">
+            <h3 class="text-lg font-semibold mb-2">{item.title}</h3>
+            {
+              item.type === "video" ? (
+                <iframe 
+                  class="w-full h-56 rounded-lg"
+                  src={item.url}
+                  title={item.title}
+                  allowfullscreen
+                ></iframe>
+              ) : (
+                <img src={item.url} alt={item.title} class="w-full h-56 object-cover rounded-lg" />
+              )
+            }
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Tagembed Widget Section -->
+    <div class="max-w-6xl mx-auto">
+      <div class="tagembed-widget w-full" style="width:100%;height:100%" data-widget-id="2166829" data-tags="false" view-url="https://widget.tagembed.com/2166829"></div>
     </div>
   </div>
+
+  <!-- Tagembed Script -->
+  <script src="https://widget.tagembed.com/embed.min.js" type="text/javascript" defer></script>
 </section>
