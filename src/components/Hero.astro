@@ -42,16 +42,22 @@
     </a>
   </div>
 
-  <!-- Jump to 60s on load & loop from 60s -->
+  <!-- Seek 60→130s and loop -->
   <script>
     const video = document.getElementById('bg-video');
+    const START = 60;
+    const END = 130;
+
     video.addEventListener('loadedmetadata', () => {
-      video.currentTime = 60;
+      // Jump to 60s on load
+      video.currentTime = START;
       video.play();
     });
+
     video.addEventListener('timeupdate', () => {
-      if (video.currentTime >= video.duration) {
-        video.currentTime = 60;
+      // When we hit or pass 130s, loop back to 60s
+      if (video.currentTime >= END) {
+        video.currentTime = START;
         video.play();
       }
     });
